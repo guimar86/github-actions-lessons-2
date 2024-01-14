@@ -11,4 +11,4 @@ jobs:
       - name: Event name
         run: echo "${{github.event_name}}"
       - name: Event details info
-        run: echo "${{github.event}}"
+        run: echo "${{toJson(github.event)}}"
