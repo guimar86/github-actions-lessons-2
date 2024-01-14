@@ -5,10 +5,10 @@ on:
 jobs:
   event_details:
     runs-on: ubuntu-latest
-    steps: 
-        - name: build code
-          uses: actions/checkout@v3
-        - name: Event name 
-          run: echo 'Event name -  ${toJSON(github.event_name)}'
-        - name: Event details info
-          run: echo 'Event name -  ${toJSON(github.event)}'
+    steps:
+      - name: build code
+        uses: actions/checkout@v3
+      - name: Event name
+        run: echo "${toJSON(github.event_name)}"
+      - name: Event details info
+        run: echo "${toJSON(github.event)}"
