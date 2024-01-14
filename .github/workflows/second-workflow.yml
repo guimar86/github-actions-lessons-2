@@ -1,0 +1,12 @@
+name: "Second test workflow"
+on:
+  issues:
+    types: [opened, edited]
+jobs:
+  event_details:
+    runs-on: ubuntu-latest
+    steps: 
+        - name: Event name 
+          run: echo 'Event name -  ${toJSON(github.event_name)}''
+        - name: Event details info
+          run: echo 'Event name -  ${toJSON(github.event)}''
