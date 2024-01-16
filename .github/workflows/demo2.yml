@@ -1,4 +1,4 @@
-name: Depploy website
+name: Deploy website
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies
         run:  npm ci
       - name: Lint code
-        run: npm run Lint
+        run: npm run lint
       - name: Test code
         run: npm run test
   build:
